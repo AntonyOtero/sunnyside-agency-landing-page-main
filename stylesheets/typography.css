@@ -1,4 +1,196 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
 
-/* font-family: 'Barlow', sans-serif;
-font-family: 'Fraunces', serif; */
+:root {
+  --font-family-sans: 'Barlow', sans-serif;
+  --font-family-serif: 'Fraunces', serif;
+}
+
+
+body,
+h1,
+h2,
+p,
+ul,
+blockquote {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+h1,
+h2,
+.hero-body,
+.article-learn-more,
+.author {
+  font-family: var(--font-family-serif);
+  font-weight: 900;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-nav li {
+  margin-bottom: 2em; /* based on it's own font-size */
+  font-weight: 600;
+  font-size: 1.2rem; /* ~20px */
+  line-height: 1.4rem; /* ~25px */
+  letter-spacing: -0.0079rem; /* -0.0079rem = -0.1422px */
+  color: #808397;
+}
+
+.site-nav li:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Hero */
+.hero-body {
+  margin-bottom: 1.29em;
+  font-size: 2.22rem; /* 2.22rem = ~40px */
+  line-height: 2.72rem; /* 2.72rem = ~49px */
+  letter-spacing: 0.347rem; /* 0.347rem = ~6.25px */
+  color: #fff;
+}
+
+/* About */
+.article-title {
+  margin-bottom: 0.75em;
+  font-size: 1.8rem; /* 1.8rem = ~32px */
+  line-height: 2.17rem; /* 2.17rem = ~39px */
+  letter-spacing: -0.0126rem; /* -0.0126rem = -0.2268px */
+  color: #24303E;
+}
+
+.article-body {
+  margin-bottom: 1.77em;
+  line-height: 1.67rem; /* 1.67rem = ~30px */
+  letter-spacing: -0.0071rem; /* -0.0071rem = -0.1278px */
+  color: #808397;
+}
+
+.learn-more-link {
+  font-size: 0.84rem; /* 0.84rem = ~15px */
+  line-height: 1.39rem; /* 1.39rem = ~25px */
+  letter-spacing: 0.06rem; /* 0.06rem = ~1px */
+  text-transform: uppercase;
+  color: #24303E;
+}
+
+.article-transform .underline {
+  background: #FAD400;
+}
+
+.article-stand-out .underline {
+  background: #FE7766;
+}
+
+/* Services */
+
+.service-graphic-design {
+  color: #24554A;
+}
+
+.service-photography {
+  color: #19536C;
+}
+
+.service-title {
+  margin-bottom: 0.96em;
+  font-size: 1.56rem; /* ~28px */
+  line-height: 1.95rem; /* ~35px */
+  letter-spacing: -0.011rem; /* -0.2px */
+}
+
+.service-body {
+  margin-bottom: 3.68em;
+  font-size: 0.89rem; /* ~16px */
+  line-height: 1.5rem; /* ~27px */
+  letter-spacing: -0.00634rem; /* -0.11412px */
+}
+
+/* Testimonials */
+.testimonials-title {
+  margin-bottom: 4em;
+  font-size: 0.888rem;
+  line-height: 1.111rem;
+  letter-spacing: 0.222rem;
+  color: #A7AAAD;
+}
+
+.quote {
+  margin: 1.77em 0;
+  line-height: 1.777rem;
+  letter-spacing: -0.007rem;
+  color: #5B636D;
+}
+
+.author,
+.job {
+  display: block;
+  font-style: normal;
+}
+
+.author {
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  line-height: 1.222rem;
+  letter-spacing: -0.007rem;
+}
+
+.job {
+  margin-bottom: 3.6rem;
+  font-size: 0.777rem;
+  line-height: 1.388rem;
+  letter-spacing: -0.005rem;
+  color: #A7AAAD;
+}
+
+/* Footer */
+.site-footer {
+  color: #458D7E;
+}
+
+.internal-links {
+  font-size: 1rem;
+  line-height: 1.388rem;
+  letter-spacing: -0.007rem;
+}
+
+.attribution {
+  width: 100%;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #F47E7D;
+}
+
+/* Utilities */
+.btn {
+  color: #24303E;
+  font-family: var(--font-family-serif);
+  font-weight: 700;
+  font-size: 0.834rem;
+  line-height: 1.67;
+  letter-spacing: -0.107;
+  text-transform: uppercase;
+}
+
+.text-loud {
+  text-transform: uppercase;
+}
