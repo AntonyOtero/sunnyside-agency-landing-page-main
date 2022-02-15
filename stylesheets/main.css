@@ -1,6 +1,12 @@
 @import url(./typography.css);
 @import url(./layout.css);
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 section {
   background: #fff;
 }
