@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
 
 :root {
+  font-family: var(--font-family-sans);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
   --font-family-sans: 'Barlow', sans-serif;
   --font-family-serif: 'Fraunces', serif;
 }
-
 
 body,
 h1,
@@ -13,13 +16,6 @@ p,
 ul,
 blockquote {
   margin: 0;
-}
-
-body {
-  font-family: var(--font-family-sans);
-  font-weight: 600;
-  font-size: 18px;
-  text-align: center;
 }
 
 h1,
@@ -41,51 +37,84 @@ a {
   color: inherit;
 }
 
-.site-nav li {
-  margin-bottom: 2em; /* based on it's own font-size */
+.site-nav-drawer li {
+  margin-bottom: 2em;
   font-weight: 600;
-  font-size: 1.2rem; /* ~20px */
-  line-height: 1.4rem; /* ~25px */
-  letter-spacing: -0.0079rem; /* -0.0079rem = -0.1422px */
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.0079rem;
   color: #808397;
 }
 
-.site-nav li:last-of-type {
+.site-nav-drawer li:last-of-type {
   margin-bottom: 0;
+  color:#000;
+}
+
+@media screen and (min-width: 1024px) {
+  .site-nav-full li{
+    line-height: 1.388rem;
+    letter-spacing: -0.0072rem;
+  }
+
+  .site-nav-full li:hover,
+  .site-nav-full li:focus {
+    text-decoration: underline;
+  }
 }
 
 /* Hero */
 .hero-body {
   margin-bottom: 1.29em;
-  font-size: 2.22rem; /* 2.22rem = ~40px */
-  line-height: 2.72rem; /* 2.72rem = ~49px */
-  letter-spacing: 0.347rem; /* 0.347rem = ~6.25px */
+  font-size: 2.22rem;
+  line-height: 2.72rem;
+  letter-spacing: 0.347rem;
   color: #fff;
+}
+
+@media screen and (min-width: 750px) {
+  .hero-body {
+    margin-bottom: 1.724em;
+    font-size: 3.11rem;
+    line-height: 3.836rem;
+    letter-spacing: 0.486rem;
+  }
 }
 
 /* About */
 .article-title {
+  width: 100%;
   margin-bottom: 0.75em;
-  font-size: 1.8rem; /* 1.8rem = ~32px */
-  line-height: 2.17rem; /* 2.17rem = ~39px */
-  letter-spacing: -0.0126rem; /* -0.0126rem = -0.2268px */
+  font-size: 1.8rem;
+  line-height: 2.17rem;
+  letter-spacing: -0.0126rem;
   color: #24303E;
 }
 
 .article-body {
   margin-bottom: 1.77em;
-  line-height: 1.67rem; /* 1.67rem = ~30px */
-  letter-spacing: -0.0071rem; /* -0.0071rem = -0.1278px */
+  line-height: 1.67rem;
+  letter-spacing: -0.0071rem; 
   color: #808397;
 }
 
+.article-learn-more {
+  cursor: pointer;
+}
+
+.article-learn-more:hover .underline,
+.article-learn-more:focus .underline {
+  opacity: 1;
+}
+
 .learn-more-link {
-  font-size: 0.84rem; /* 0.84rem = ~15px */
-  line-height: 1.39rem; /* 1.39rem = ~25px */
-  letter-spacing: 0.06rem; /* 0.06rem = ~1px */
+  font-size: 0.84rem;
+  line-height: 1.39rem;
+  letter-spacing: 0.06rem;
   text-transform: uppercase;
   color: #24303E;
 }
+
 
 .article-transform .underline {
   background: #FAD400;
@@ -93,6 +122,19 @@ a {
 
 .article-stand-out .underline {
   background: #FE7766;
+}
+
+@media screen and (min-width: 1024px) {
+  article .container{
+    text-align: left;
+  }
+
+  .article-title {
+    margin-bottom: 0.8em;
+    font-size: 2.23rem; 
+    line-height: 2.74rem; 
+    letter-spacing: -0.016rem; 
+  }
 }
 
 /* Services */
@@ -107,16 +149,16 @@ a {
 
 .service-title {
   margin-bottom: 0.96em;
-  font-size: 1.56rem; /* ~28px */
-  line-height: 1.95rem; /* ~35px */
-  letter-spacing: -0.011rem; /* -0.2px */
+  font-size: 1.56rem;
+  line-height: 1.95rem;
+  letter-spacing: -0.011rem;
 }
 
 .service-body {
   margin-bottom: 3.68em;
-  font-size: 0.89rem; /* ~16px */
-  line-height: 1.5rem; /* ~27px */
-  letter-spacing: -0.00634rem; /* -0.11412px */
+  font-size: 0.89rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.00634rem;
 }
 
 /* Testimonials */
@@ -156,6 +198,15 @@ a {
   color: #A7AAAD;
 }
 
+@media screen and (min-width: 1140){
+  .testimonials-title {
+    margin-bottom: 4.05em;
+    font-size: 1.12rem;
+    line-height: 1.37rem;
+    letter-spacing: 0.28rem;
+  }
+}
+
 /* Footer */
 .site-footer {
   color: #458D7E;
@@ -167,16 +218,36 @@ a {
   letter-spacing: -0.007rem;
 }
 
+.social-links {
+  margin-bottom: 72px;
+}
+
+.internal-links a:hover,
+.internal-links a:focus{
+  color: #fff;
+}
+
+.social-links a:hover path,
+.social-links a:focus path{
+  fill: #fff;
+}
+
 .attribution {
   width: 100%;
   margin-bottom: 10px;
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 11px;
+  font-size: 1rem;
   text-align: center;
 }
+
 .attribution a {
+  text-decoration: underline;
+}
+
+.attribution a:hover,
+.attribution a:focus{
   color: #F47E7D;
 }
 

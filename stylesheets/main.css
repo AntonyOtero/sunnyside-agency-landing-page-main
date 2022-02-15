@@ -1,7 +1,11 @@
 @import url(./typography.css);
 @import url(./layout.css);
 
-img {
+section {
+  background: #fff;
+}
+
+img{
   display: block;
   max-width: 100%;
   margin: 0 auto;
@@ -19,14 +23,17 @@ img {
 }
 
 .underline {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: -10px auto 0;
   height: 10px;
-  width: 7.62rem; /* ~137px */
+  width: 7.62rem;
   opacity: 0.25;
   border-radius: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+  .underline {
+    margin-left: -8px;
+  }
 }
 
 .active {
@@ -35,4 +42,8 @@ img {
 
 .open {
   display: flex;
+}
+
+.hide {
+  display: none;
 }
